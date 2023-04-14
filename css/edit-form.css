@@ -40,17 +40,42 @@ form {
     margin-bottom: 5px;
 }
 
-.submit button{
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    /* color: #fff; */
+.bt1{
     border: none;
-    border-radius: 3px;
+    background: #8c1515;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+    border-radius: 3px;
+    padding: 6px;
+    width: 100px;
+    color: white;
+    margin-left: 25px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
 }
 
-.submit button:hover {
-    background-color: #2E8B57;
+.bt1:hover {
+    background-color: #5b0606;
+}
+
+.submit {
+    display: inline-block;
+}
+
+.bt2 a {
+    color: black;
+}
+
+.bt2 {
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+    width: 100px;
+    color: black;
+    margin-left: 25px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+.bt2:hover {
+    background-color: #c5c0c0;
 }
