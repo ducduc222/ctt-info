@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/Nav.css">
   <link rel="stylesheet" href="./css/Content.css">
   <link rel="stylesheet" href="./css/Footer.css">
+  <link rel="stylesheet" href="./css/edit-form.css">
 </head>
 
 <body>
@@ -247,112 +248,112 @@
         </div>
         <div class="MainContent">
           <div class="maincontent-row">
-            <span>THÔNG TIN SINH VIÊN</span>
-            <a href="./edit-profile.html"><button><img src="./image/edit-svgrepo-com.svg" alt="" style="height: 20px; width: 20px"></button></a>
+            <span>CHỈNH SỬA THÔNG TIN SINH VIÊN</span>
             <hr>
           </div>
 
+          <div class="form-edit">
+            <form action="" method="POST">
+              <div class="avatar basic">
+                <label for="avatar">Ảnh đại diện:&emsp;</label>
+                <input type="file" name="avatar">
+              </div>
 
+              <div class="mssv basic">
+                <label for="mssv">MSSV:</label>
+                <input type="text" id="mssv" name="mssv" value="20204790"><br>
+              </div>
 
-          <div class="maincontent-row thongtinsinhvien-content">
-            <div class="box1">
-              <div class="avatar"><img src="./image/avatar.jpg" alt=""></div>
-              <div class="mssv"><strong>MSSV:</strong><span>20204790</span></div>
-            </div>
-            <div class="box2">
-              <ul>
-                <li><strong>Họ và tên&emsp;:</strong>Vũ Minh Thành</li>
-                <li><strong>Năm vào trường&emsp;:</strong>2020</li>
-                <li><strong>Bậc đào tạo&emsp;:</strong>KSCLC-TN-TT-VN-ICT</li>
-                <li><strong>Chương trình&emsp;:</strong>Công nghệ thông tin Việt-Nhật 2020</li>
-                <li><strong>Khoa/Viện quản lý&emsp;:</strong>Trường Công nghệ Thông tin và Truyền thông</li>
-                <li><strong>Tình trạng học tập&emsp;:</strong>Học</li>
-              </ul>
-            </div>
-            <div class="box3">
-              <ul>
-                <li><strong>Giới tính&emsp;:</strong>Nam</li>
-                <li><strong>Lớp&emsp;:</strong>Việt Nhật 05-K65</li>
-                <li><strong>Khóa học&emsp;:</strong>65</li>
-                <li><strong>Email&emsp;:</strong>duc.nv204953@sis.hust.edu.vn</li>
-              </ul>
-            </div>
-          </div>
+              <div class="hoTen basic">
+                <label for="hoTen">Họ và tên:</label>
+                <input type="text" id="hoTen" name="hoTen" value="Vũ Minh Thành"><br>
+              </div>
 
+              <div class="namVaoTruong basic">
+                <label for="namVaoTruong">Năm vào trường:</label>
+                <select id="namVaoTruong" name="namVaoTruong">
+                  <option value="2020">2018</option>
+                  <option value="2020">2019</option>
+                  <option value="2020" selected>2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select><br>
+              </div>
 
+              <div class="bacDaoTao basic">
+                <label for="bacDaoTao">Bậc đào tạo:</label>
+                <select id="bacDaoTao" name="bacDaoTao">
+                  <option value="KSCLC-TN-TT-VN-ICT">KSCLC-TN-TT-VN-ICT</option>
+                  <option value="Đại học đại trả" selected>Đại học đại trả</option>
+                </select><br>
+              </div>
 
-          <div class="maincontent-row">
-            <span>THÔNG TIN HỌC TẬP</span>
-            <hr>
-          </div>
+              <div class="chuongTrinh basic">
+                <label for="chuongTrinh">Chương trình:</label>
+                <select id="chuongTrinh" name="chuongTrinh">
+                  <option value="Khoa học máy tính">Khoa học máy tính</option>
+                  <option value="Kỹ thuật Máy tính 2020" selected>Kỹ thuật Máy tính 2020</option>
+                  <option value="Quản trị kinh doanh">Quản trị kinh doanh</option>
+                  <option value="Công nghệ thông tin Việt Nhật 2020">Công nghệ thông tin Việt Nhật 2020</option>
+                  <option value="Ngôn ngữ Anh">Ngôn ngữ Anh</option>
+                </select><br>
+              </div>
 
+              <div class="khoaVien basic">
+                <label for="khoaVien">Khoa/Viện quản lý:</label>
+                <select id="khoaVien" name="khoaVien">
+                  <option value=" Trường Công nghệ Thông tin và Truyền thông" selected> Trường Công nghệ Thông tin và Truyền thông</option>
+                  <option value="Trường Điện">Trường Điện</option>
+                  <option value="Viện Kinh tế">Viện Kinh tế</option>
+                  <option value="Viện Ngoại ngữ">Viện Ngoại ngữ</option>
+                </select><br>
+              </div>
 
+              <div class="tinhTrangHocTap basic">
+                <label for="tinhTrangHocTap">Tình trạng học tập:</label>
+                <select id="tinhTrangHocTap" name="tinhTrangHocTap">
+                  <option value="Học">Học</option>
+                  <option value="Tốt nghiệp">Tốt nghiệp</option>
+                  <option value="Thôi học">Thôi học</option>
+                </select><br>
+              </div>
 
-          <div class="maincontent-row thongtinhoctap-content">
-            <div class="box1">
-              <ul>
-                <li><strong>Tổng kết học kỳ&emsp;:</strong>20212</li>
-                <li><strong>Trung bình tích lũy&emsp;:</strong>3.55</li>
-                <li><strong>Số TC nợ đăng ký&emsp;:</strong>0</li>
-              </ul>
-            </div>
-            <div class="box2">
-              <ul>
-                <li><strong>Số TC tích lũy&emsp;:</strong>65</li>
-                <li><strong>Trình độ sinh viên&emsp;:</strong>3</li>
-                <li><strong>Mức cảnh báo&emsp;:</strong>M0</li>
-              </ul>
-            </div>
-          </div>
+              <div class="gioiTinh">
+                <label class="title-gioitinh" for="gioiTinh">Giới tính:</label>
+                <input type="radio" id="nam" name="gioiTinh" value="Nam" checked>
+                <label for="nam">Nam</label>
+                <input type="radio" id="nu" name="gioiTinh" value="Nữ">
+                <label for="nu">Nữ</label><br>
+              </div>
 
+              <div class="lop basic">
 
+                <label for="lop">Lớp:</label>
+                <select id="lop" name="lop">
+                  <option value="Việt Nhật 01-K65">Việt Nhật 01-K65</option>
+                  <option value="Việt Nhật 02-K65">Việt Nhật 02-K65</option>
+                  <option value="Việt Nhật 03-K65">Việt Nhật 03-K65</option>
+                  <option value="Việt Nhật 04-K65">Việt Nhật 04-K65</option>
+                  <option value="Việt Nhật 05-K65">Việt Nhật 05-K65</option>
+                  <option value="Kỹ thuật máy tính 01-K65">Kỹ thuật máy tính 01-K65</option>
+                  <option value="Kỹ thuật máy tính 02-K65">Kỹ thuật máy tính 02-K65</option>
+                  <option value="Kỹ thuật máy tính 03-K65" selected>Kỹ thuật máy tính 03-K65</option>
+                  <option value="Kỹ thuật máy tính 04-K65">Kỹ thuật máy tính 04-K65</option>
+                  <option value="Kỹ thuật máy tính 05-K65">Kỹ thuật máy tính 05-K65</option>
+                  <option value="Kỹ thuật máy tính 06-K65">Kỹ thuật máy tính 06-K65</option>
+                </select>
+              </div>
 
-          <div class="maincontent-row">
-            <span>THÔNG TIN CÁ NHÂN</span>
-            <hr>
-          </div>
-
-
-
-          <div class="maincontent-row thongtincanhan-content">
-            <div class="box1">
-              <ul>
-                <li><strong>Dân tộc&emsp;:</strong>KINH</li>
-                <li><strong>Năm TN cấp 3&emsp;:</strong>2020</li>
-                <li><strong>Địa chỉ&emsp;:</strong>PHƯỜNG QUỲNH LÔI, QUẬN HAI BÀ TRƯNG, THÀNH PHỐ HÀ NỘI</li>
-                <li><strong>Số CMTND&emsp;:</strong>034202009675</li>
-                <li><strong>Nơi cấp&emsp;:</strong>THÁI BÌNH</li>
-                <li><strong>Họ tên bố&emsp;:</strong>VŨ VĂN SINH</li>
-                <li><strong>Năm sinh&emsp;:</strong>1967</li>
-                <li><strong>Nghề nghiệp&emsp;:</strong>BỘ ĐỘI</li>
-                <li><strong>Điện thoại&emsp;:</strong>0987398540</li>
-                <li><strong>Email&emsp;:</strong>KHÔNG CÓ</li>
-
-              </ul>
-            </div>
-            <div class="box2">
-              <ul>
-                <li><strong>Tôn giáo&emsp;:</strong>KHÔNG</li>
-                <li><strong>Trường THPT&emsp;:</strong>THPT TIÊN HƯNG, HUYỆN ĐÔNG HƯNG, TỈNH THÁI BÌNH</li>
-                <li><strong>Hộ khẩu&emsp;:</strong>XÃ MINH TÂN, HUYỆN ĐÔNG HƯNG, TỈNH THÁI BÌNH</li>
-                <li><strong>Số điện thoại&emsp;:</strong>0987643859</li>
-                <li><strong>Họ tên bố&emsp;:</strong>VŨ VĂN SINH</li>
-                <li><strong>Năm sinh&emsp;:</strong>1967</li>
-                <li><strong>Nghề nghiệp&emsp;:</strong>BỘ ĐỘI</li>
-                <li><strong>Điện thoại&emsp;:</strong>0987398540</li>
-                <li><strong>Email&emsp;:</strong>KHÔNG CÓ</li>
-              </ul>
-            </div>
+              <div class="submit">
+                <button type="submit">Cập nhật thông tin</button>
+              </div>
+            </form>
           </div>
         </div>
-
-
-
-        <p class="note">
-          <strong>Ghi chú</strong>:Nếu sinh viên thấy thông tin của mình chưa chính xác, xin vui lòng liên hệ phòng Đào
-          tạo để cập nhật lại.
-        </p>
       </div>
+
+
     </div>
 
     <footer class="footer">
