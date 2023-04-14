@@ -103,3 +103,11 @@
 .thongtincanhan-content {
     margin-bottom: 30px;
 }
+
+button {
+    border: none;
+    background-color: none;
+}
+button:hover {
+    cursor: pointer;
+}
