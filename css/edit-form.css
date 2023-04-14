@@ -63,6 +63,9 @@ form {
 .bt2 a {
     color: black;
 }
+.bt1 a {
+    color: white;
+}
 
 .bt2 {
     border: none;
