@@ -48,7 +48,32 @@
     display: grid;
     grid-template-columns: 25% 33.333333333% 33.333333333%;
 }
-
+.thongtinsv {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.thongtinsv-left>span {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: bold;
+    color: #8c1515;
+    vertical-align: middle;
+    line-height: 2em;
+}
+.editButtons button {
+    height: 25px;
+    padding: 3px 5px;
+}
+.editButtons button:nth-child(1) {
+    background-color: #e30606;
+    color: white;
+}
+.editButtons button:nth-child(2) {
+    background-color: #fec273;
+    color: rgb(19, 18, 18);
+}
 .thongtinsinhvien-content .box1 {
     padding-right: 15px;
     padding-left: 15px;
@@ -108,6 +133,26 @@ button {
     border: none;
     background-color: none;
 }
+
 button:hover {
     cursor: pointer;
+}
+
+.thongtinsinhvien-content input {
+    border: none;
+    background-color: white;
+    color: black;
+    height: 20px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.thongtinsinhvien-content select {
+    border: none;
+    color: black;
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    height: 24px;
+    padding: 0 5px;
 }

@@ -247,37 +247,88 @@
         </div>
         <div class="MainContent">
           <div class="maincontent-row">
-            <span>THÔNG TIN SINH VIÊN</span>
-            <a href="./edit-profile.html"><button><img src="./image/edit-svgrepo-com.svg" alt="" style="height: 20px; width: 20px"></button></a>
+            <div class="thongtinsv">
+              <div class="thongtinsv-left">
+                <span>THÔNG TIN SINH VIÊN</span>
+                <button id="editButton" class="editButton"><img src="./image/edit-svgrepo-com.svg" alt=""
+                    style="height: 20px; width: 20px"></button>
+
+              </div>
+              <div id="editButtons" class="editButtons" style="display: none;">
+                <button id="okButton">Ok</button>
+                <button id="cancelButton">Cancel</button>
+                <button id="resetButton">Reset</button>
+              </div>
+            </div>
             <hr>
           </div>
 
-
-
           <div class="maincontent-row thongtinsinhvien-content">
             <div class="box1">
-              <div class="avatar"><img src="./image/avatar.png" alt=""></div>
-              <div class="mssv"><strong>MSSV:</strong><span>20204953</span></div>
+              <div id="boxImage" style="display: none;">
+                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                <button id="changeAvatarButton">Change Avatar</button>
+              </div>
+
+              <div class="avatar">
+                <img src="./image/avatar.png" alt="">
+              </div>
+              <div class="mssv">
+                <strong>MSSV:</strong>
+                <span id="mssv">20204953</span>
+              </div>
             </div>
+
             <div class="box2">
               <ul>
-                <li><strong>Họ và tên&emsp;:</strong>NGUYỄN VĂN ĐỨC</li>
-                <li><strong>Năm vào trường&emsp;:</strong>2020</li>
-                <li><strong>Bậc đào tạo&emsp;:</strong>KSCLC-TN-TT-VN-ICT</li>
-                <li><strong>Chương trình&emsp;:</strong>Công nghệ thông tin Việt-Nhật 2020</li>
-                <li><strong>Khoa/Viện quản lý&emsp;:</strong>Trường Công nghệ Thông tin và Truyền thông</li>
-                <li><strong>Tình trạng học tập&emsp;:</strong>Học</li>
+                <li><strong>Họ và tên&emsp;:</strong><input type="text" id="hoTen" disabled value="NGUYỄN VĂN ĐỨC"></li>
+                <li><strong>Năm vào trường&emsp;:</strong>
+                  <select name="namVaoTruong" id="namVaoTruong" disabled>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020" selected>2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                  </select>
+                </li>
+                <li><strong>Bậc đào tạo&emsp;:</strong><input type="text" id="bacDaoTao" disabled
+                    value="KSCLC-TN-TT-VN-ICT"></li>
+                <li><strong>Chương trình&emsp;:</strong><input type="text" id="chuongTrinh" disabled
+                    value="Công nghệ thông tin Việt-Nhật 2020"></li>
+                <li><strong>Khoa/Viện quản lý&emsp;:</strong><input type="text" id="khoaVien" disabled
+                    value="Trường Công nghệ Thông tin và Truyền thông"></li>
+                <li><strong>Tình trạng học tập&emsp;:</strong>Học
+                </li>
               </ul>
             </div>
             <div class="box3">
               <ul>
-                <li><strong>Giới tính&emsp;:</strong>Nam</li>
-                <li><strong>Lớp&emsp;:</strong>Việt Nhật 05-K65</li>
-                <li><strong>Khóa học&emsp;:</strong>65</li>
-                <li><strong>Email&emsp;:</strong>duc.nv204953@sis.hust.edu.vn</li>
+                <li><strong>Giới tính&emsp;:</strong>
+                  <select name="gioiTinh" id="gioiTinh" disabled>
+                    <option value="Nam" selected>Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                  </select>
+                </li>
+                <li><strong>Lớp&emsp;:</strong><input type="text" id="lop" disabled value="Việt Nhật 05-K65"></li>
+                <li><strong>Khóa học&emsp;:</strong>
+                  <select name="khoaHoc" id="khoaHoc" disabled>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65" selected>65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                  </select>
+                </li>
+                </li>
+                <li><strong>Email&emsp;:</strong><input type="text" id="email" disabled
+                    value="duc.nv204953@sis.hust.edu.vn"></li>
               </ul>
             </div>
           </div>
+
 
 
 
@@ -292,7 +343,7 @@
             <div class="box1">
               <ul>
                 <li><strong>Tổng kết học kỳ&emsp;:</strong>20231</li>
-                <li><strong>Trung bình tích lũy&emsp;:</strong>3.95</li>
+                <li><strong>Trung bình tích lũy&emsp;:</strong>5.0</li>
                 <li><strong>Số TC nợ đăng ký&emsp;:</strong>0</li>
               </ul>
             </div>
@@ -366,6 +417,8 @@
       </div>
     </footer>
   </div>
+  <script src="./edit.js"></script>
+
 </body>
 
 </html>
