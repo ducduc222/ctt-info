@@ -105,16 +105,40 @@ cancelButton.addEventListener("click", () => {
 // Xử lý sự kiện khi nhấn nút "Reset"
 resetButton.addEventListener("click", () => {
     // Đặt lại giá trị của input
-    hoTenInput.value = localStorage.getItem("hoTen") || hoTenInput.value;
-    namVaoTruongInput.value = localStorage.getItem("namVaoTruong") || namVaoTruongInput.value;
-    bacDaoTao.value = localStorage.getItem("bacDaoTao") || bacDaoTao.value;
-    chuongTrinh.value = localStorage.getItem("chuongTrinh") || chuongTrinh.value;
-    khoaVien.value = localStorage.getItem("khoaVien") || khoaVien.value;
-    gioiTinh.value = localStorage.getItem("gioiTinh") || gioiTinh.value;
-    lop.value = localStorage.getItem("lop") || lop.value;
-    khoaHoc.value = localStorage.getItem("khoaHoc") || khoaHoc.value;
-    email.value = localStorage.getItem("email") || email.value;
-    avatarImage.src = localStorage.getItem("avatarImageUrl") || "./image/avatar.png";
+    hoTenInput.value = "NGUYỄN VĂN ĐỨC"
+    namVaoTruongInput.value = "2020"
+    bacDaoTao.value = "KSCLC-TN-TT-VN-ICT"
+    chuongTrinh.value = "Công nghệ thông tin Việt-Nhật 2020"
+    khoaVien.value = "Trường Công nghệ Thông tin và Truyền thông"
+    gioiTinh.value = "Nam"
+    lop.value = "Việt Nhật 05-K64"
+    khoaHoc.value = "65"
+    email.value = "duc.nv204953@sis.hust.edu.vn"
+    avatarImage.src = "./image/avatar.png";
+    localStorage.setItem("hoTen", hoTenInput.value);
+    localStorage.setItem("namVaoTruong", namVaoTruongInput.value);
+    localStorage.setItem("bacDaoTao", bacDaoTao.value);
+    localStorage.setItem("chuongTrinh", chuongTrinh.value);
+    localStorage.setItem("khoaVien", khoaVien.value);
+    localStorage.setItem("gioiTinh", gioiTinh.value);
+    localStorage.setItem("lop", lop.value);
+    localStorage.setItem("khoaHoc", khoaHoc.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("avatarImageUrl", avatarImage.src);
+
+    // Vô hiệu hóa các input và ẩn các nút
+    boxImage.style.display = "none";
+    hoTenInput.disabled = true;
+    namVaoTruongInput.disabled = true;
+    bacDaoTao.disabled = true;
+    chuongTrinh.disabled = true;
+    khoaVien.disabled = true;
+    gioiTinh.disabled = true;
+    lop.disabled = true;
+    khoaHoc.disabled = true;
+    email.disabled = true;
+    editButtons.style.display = "none";
+    setCssInputDisable();
     printLog("Reset");
 });
 
