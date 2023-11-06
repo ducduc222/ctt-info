@@ -70,7 +70,7 @@ okButton.addEventListener("click", () => {
     email.disabled = true;
     editButtons.style.display = "none";
     setCssInputDisable();
-    printLog();
+    printLog("Ok");
 });
 
 // Xử lý sự kiện khi nhấn nút "Cancel"
@@ -99,7 +99,7 @@ cancelButton.addEventListener("click", () => {
     email.disabled = true;
     editButtons.style.display = "none";
     setCssInputDisable();
-    printLog();
+    printLog("Cancel");
 });
 
 // Xử lý sự kiện khi nhấn nút "Reset"
@@ -115,7 +115,7 @@ resetButton.addEventListener("click", () => {
     khoaHoc.value = localStorage.getItem("khoaHoc") || khoaHoc.value;
     email.value = localStorage.getItem("email") || email.value;
     avatarImage.src = localStorage.getItem("avatarImageUrl") || "./image/avatar.png";
-    printLog();
+    printLog("Reset");
 });
 
 
@@ -196,7 +196,7 @@ if (savedAvatarImageUrl) {
     avatarImage.src = savedAvatarImageUrl;
 }
 
-const printLog = () => {
+const printLog = (event) => {
     const data = {
         "hoTenInput": localStorage.getItem("hoTen") || hoTenInput.value,
         "namVaoTruongInput": localStorage.getItem("namVaoTruong") || namVaoTruongInput.value,
@@ -210,5 +210,5 @@ const printLog = () => {
         "avatarImage": avatarImage.src
     }
 
-    console.log(data);
+    console.log(event, data);
 }
