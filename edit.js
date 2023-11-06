@@ -70,6 +70,7 @@ okButton.addEventListener("click", () => {
     email.disabled = true;
     editButtons.style.display = "none";
     setCssInputDisable();
+    printLog();
 });
 
 // Xử lý sự kiện khi nhấn nút "Cancel"
@@ -98,6 +99,7 @@ cancelButton.addEventListener("click", () => {
     email.disabled = true;
     editButtons.style.display = "none";
     setCssInputDisable();
+    printLog();
 });
 
 // Xử lý sự kiện khi nhấn nút "Reset"
@@ -113,6 +115,7 @@ resetButton.addEventListener("click", () => {
     khoaHoc.value = localStorage.getItem("khoaHoc") || khoaHoc.value;
     email.value = localStorage.getItem("email") || email.value;
     avatarImage.src = localStorage.getItem("avatarImageUrl") || "./image/avatar.png";
+    printLog();
 });
 
 
@@ -166,29 +169,46 @@ const avatarImage = document.querySelector(".avatar img");
 
 // Add an event listener to the "Change Avatar" button to trigger the file input click
 changeAvatarButton.addEventListener("click", () => {
-  avatarInput.click();
+    avatarInput.click();
 });
 
 // Add an event listener to the file input to handle the image selection
 avatarInput.addEventListener("change", (event) => {
-  const file = event.target.files[0];
+    const file = event.target.files[0];
 
-  if (file) {
-    const reader = new FileReader();
+    if (file) {
+        const reader = new FileReader();
 
-    reader.onload = (e) => {
-      // Update the image source with the selected image
-      avatarImage.src = e.target.result;
-      // Save the image URL to localStorage
-    //   localStorage.setItem("avatarImageUrl", e.target.result);
-    };
+        reader.onload = (e) => {
+            // Update the image source with the selected image
+            avatarImage.src = e.target.result;
+            // Save the image URL to localStorage
+            //   localStorage.setItem("avatarImageUrl", e.target.result);
+        };
 
-    reader.readAsDataURL(file);
-  }
+        reader.readAsDataURL(file);
+    }
 });
 
 // Check if an avatar image URL is already in localStorage and set it
 const savedAvatarImageUrl = localStorage.getItem("avatarImageUrl");
 if (savedAvatarImageUrl) {
-  avatarImage.src = savedAvatarImageUrl;
+    avatarImage.src = savedAvatarImageUrl;
+}
+
+const printLog = () => {
+    const data = {
+        "hoTenInput": localStorage.getItem("hoTen") || hoTenInput.value,
+        "namVaoTruongInput": localStorage.getItem("namVaoTruong") || namVaoTruongInput.value,
+        "bacDaoTao": localStorage.getItem("bacDaoTao") || bacDaoTao.value,
+        "chuongTrinh": localStorage.getItem("chuongTrinh") || chuongTrinh.value,
+        "khoaVien": localStorage.getItem("khoaVien") || khoaVien.value,
+        "gioiTinh": localStorage.getItem("gioiTinh") || gioiTinh.value,
+        "lop": localStorage.getItem("lop") || lop.value,
+        "khoaHoc": localStorage.getItem("khoaHoc") || khoaHoc.value,
+        "email": localStorage.getItem("email") || email.value,
+        "avatarImage": avatarImage.src
+    }
+
+    console.log(data);
 }
