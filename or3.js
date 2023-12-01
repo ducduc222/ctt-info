@@ -139,9 +139,22 @@ function addItem(element) {
 
 addInfoItemBtn.addEventListener("click", addInfoItem)
 addGroupItemBtn.addEventListener("click", addGroupItem)
-
+const btnnn = $('#button-title')[0]
+btnnn.disabled = true;
+btnnn.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+btnnn.style.border = "none";
+btnnn.addEventListener("dblclick", function () {
+    btnnn.style.border = "1px solid black";
+    btnnn.disabled = false;
+});
+btnnn.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        btnnn.disabled = true;
+        btnnn.style.border = "none";
+    }
+});
 $("body").on("click", "#btnExport", function () {
-    
+
     html2canvas($('.content')[0], {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
