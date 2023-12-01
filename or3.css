@@ -1,0 +1,61 @@
+.title-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#add-info-item-button {
+    margin-left: 10px;
+    color: black;
+
+}
+#add-info-item-button:hover {
+    cursor: pointer;
+}
+#add-group-item-button {
+    margin-left: 10px;
+    color: black;
+}
+#add-group-item-button:hover {
+    cursor: pointer;
+}
+#delete-group-item-button {
+    margin-left: 10px;
+    color: black;
+}
+#delete-group-item-button:hover {
+    cursor: pointer;
+}
+.thongtinsv-left>span input {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: bold;
+    color: #8c1515;
+    vertical-align: middle;
+    line-height: 2em;
+}
+.content-info div {
+    margin-bottom: 5px;
+    align-items: center;
+}
+.content-info div input{
+    margin-left: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content-info div button {
+    margin-left: 20px;
+    background: none;
+    color: red;
+    text-transform: uppercase;
+}
+.maincontent-row {
+    margin-bottom: 30px;
+}
+#btnExport {
+    margin-left: 20px;
+    background-color: #a86262;
+    padding: 3px;
+    color: white;
+}

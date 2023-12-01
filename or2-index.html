@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="./css/Nav.css">
   <link rel="stylesheet" href="./css/Content.css">
   <link rel="stylesheet" href="./css/Footer.css">
-  <link rel="stylesheet" href="./or3.css">
 </head>
 
 <body>
@@ -242,28 +241,160 @@
 
       <!-- jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj -->
       <div class="content">
-
         <div class="MainContentTitle">
-          <h3>THÔNG TIN CÁ NHÂN<button id="btnExport">Xuất PDF</button></h3>
-
+          <h3>THÔNG TIN CÁ NHÂN</h3>
           <hr>
         </div>
         <div class="MainContent">
           <div class="maincontent-row">
-            <div class="title-group">
+            <div class="thongtinsv">
               <div class="thongtinsv-left">
-                <span>Thông tin sinh viên_202024953</span>
+                <span>THÔNG TIN SINH VIÊN</span>
+                <button id="editButton" class="editButton"><img src="./image/edit-svgrepo-com.svg" alt=""
+                    style="height: 20px; width: 20px"></button>
+
               </div>
-              <div id="add-info-item-button">
-                < Add Info Item>
-              </div>
-              <div id="add-group-item-button">
-                < Add Group Item>
+              <div id="editButtons" class="editButtons" style="display: none;">
+                <button id="okButton">Ok</button>
+                <button id="cancelButton">Cancel</button>
+                <button id="resetButton">Reset</button>
               </div>
             </div>
             <hr>
           </div>
 
+          <div class="maincontent-row thongtinsinhvien-content">
+            <div class="box1">
+              <div id="boxImage" style="display: none;">
+                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                <button id="changeAvatarButton">Change Avatar</button>
+              </div>
+
+              <div class="avatar">
+                <img src="./image/avatar.png" alt="">
+              </div>
+              <div class="mssv">
+                <strong>MSSV:</strong>
+                <span id="mssv">20204953</span>
+              </div>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li><strong>Họ và tên&emsp;:</strong><input type="text" id="hoTen" disabled value="NGUYỄN VĂN ĐỨC"></li>
+                <li><strong>Năm vào trường&emsp;:</strong>
+                  <select name="namVaoTruong" id="namVaoTruong" disabled>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020" selected>2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                  </select>
+                </li>
+                <li><strong>Bậc đào tạo&emsp;:</strong><input type="text" id="bacDaoTao" disabled
+                    value="KSCLC-TN-TT-VN-ICT"></li>
+                <li><strong>Chương trình&emsp;:</strong><input type="text" id="chuongTrinh" disabled
+                    value="Công nghệ thông tin Việt-Nhật 2020"></li>
+                <li><strong>Khoa/Viện quản lý&emsp;:</strong><input type="text" id="khoaVien" disabled
+                    value="Trường Công nghệ Thông tin và Truyền thông"></li>
+                <li><strong>Tình trạng học tập&emsp;:</strong>Học
+                </li>
+              </ul>
+            </div>
+            <div class="box3">
+              <ul>
+                <li><strong>Giới tính&emsp;:</strong>
+                  <select name="gioiTinh" id="gioiTinh" disabled>
+                    <option value="Nam" selected>Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                  </select>
+                </li>
+                <li><strong>Lớp&emsp;:</strong><input type="text" id="lop" disabled value="Việt Nhật 05-K65"></li>
+                <li><strong>Khóa học&emsp;:</strong>
+                  <select name="khoaHoc" id="khoaHoc" disabled>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65" selected>65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                  </select>
+                </li>
+                </li>
+                <li><strong>Email&emsp;:</strong><input type="text" id="email" disabled
+                    value="duc.nv204953@sis.hust.edu.vn"></li>
+              </ul>
+            </div>
+          </div>
+
+
+
+
+          <div class="maincontent-row">
+            <span>THÔNG TIN HỌC TẬP</span>
+            <hr>
+          </div>
+
+
+
+          <div class="maincontent-row thongtinhoctap-content">
+            <div class="box1">
+              <ul>
+                <li><strong>Tổng kết học kỳ&emsp;:</strong>20231</li>
+                <li><strong>Trung bình tích lũy&emsp;:</strong>5.0</li>
+                <li><strong>Số TC nợ đăng ký&emsp;:</strong>0</li>
+              </ul>
+            </div>
+            <div class="box2">
+              <ul>
+                <li><strong>Số TC tích lũy&emsp;:</strong>90</li>
+                <li><strong>Trình độ sinh viên&emsp;:</strong>4</li>
+                <li><strong>Mức cảnh báo&emsp;:</strong>M0</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <div class="maincontent-row">
+            <span>THÔNG TIN CÁ NHÂN</span>
+            <hr>
+          </div>
+
+
+
+          <div class="maincontent-row thongtincanhan-content">
+            <div class="box1">
+              <ul>
+                <li><strong>Dân tộc&emsp;:</strong>KINH</li>
+                <li><strong>Năm TN cấp 3&emsp;:</strong>2020</li>
+                <li><strong>Địa chỉ&emsp;:</strong>XÃ HỒNG GIANG, HUYỆN ĐÔNG HƯNG, TỈNH THÁI BÌNH</li>
+                <li><strong>Số CMTND&emsp;:</strong>034202009999</li>
+                <li><strong>Nơi cấp&emsp;:</strong>THÁI BÌNH</li>
+                <li><strong>Họ tên bố&emsp;:</strong>NGUYỄN VĂN HỒI</li>
+                <li><strong>Năm sinh&emsp;:</strong>1979</li>
+                <li><strong>Nghề nghiệp&emsp;:</strong>KINH DOANH</li>
+                <li><strong>Điện thoại&emsp;:</strong>0987836475</li>
+                <li><strong>Email&emsp;:</strong>KHÔNG CÓ</li>
+
+              </ul>
+            </div>
+            <div class="box2">
+              <ul>
+                <li><strong>Tôn giáo&emsp;:</strong>KHÔNG</li>
+                <li><strong>Trường THPT&emsp;:</strong>THPT TIÊN HƯNG, HUYỆN ĐÔNG HƯNG, TỈNH THÁI BÌNH</li>
+                <li><strong>Hộ khẩu&emsp;:</strong>XÃ HỒNG GIANG, HUYỆN ĐÔNG HƯNG, TỈNH THÁI BÌNH</li>
+                <li><strong>Số điện thoại&emsp;:</strong>0987876766</li>
+                <li><strong>Họ tên bố&emsp;:</strong>ĐỖ THỊ LÝ</li>
+                <li><strong>Năm sinh&emsp;:</strong>1982</li>
+                <li><strong>Nghề nghiệp&emsp;:</strong>KINH DOANH</li>
+                <li><strong>Điện thoại&emsp;:</strong>0987665799</li>
+                <li><strong>Email&emsp;:</strong>KHÔNG CÓ</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
 
@@ -286,13 +417,7 @@
       </div>
     </footer>
   </div>
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
-  <script src="./or3.js"></script>
+  <script src="./edit.js"></script>
 
 </body>
 
